@@ -12,7 +12,7 @@ Command:
 `<old_guid>` - GUID of the player from the old server
 
 Example:    
-`python fix-host-save.py 00000000000000000000000000000001 6A80B1A6000000000000000000000000`
+`python fix-savs.py 00000000000000000000000000000001 6A80B1A6000000000000000000000000`
 
 ## migrate a co-op save to a Linux dedicated server
 
