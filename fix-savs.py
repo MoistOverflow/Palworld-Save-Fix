@@ -10,9 +10,9 @@ from lib.paltypes import PALWORLD_CUSTOM_PROPERTIES, PALWORLD_TYPE_HINTS
 
 
 def main(sav_file: str, guid: str):
-    if sav_file[-4:] == ".sav":
+    if sav_file[-4:] == ".SAV":
         sav_file = sav_file[:-4]
-    if guid[-4:] == ".sav":
+    if guid[-4:] == ".SAV":
         guid = guid[:-4]
 
     convert_sav_to_json(filename=f"savs/{sav_file}.sav", output_path=f"./savs/{sav_file}.json")
@@ -121,4 +121,4 @@ def confirm_prompt(question: str) -> bool:
 if __name__ == "__main__":
     a = sys.argv[1]
     b = sys.argv[2]
-    main(sav_file=a, guid=b)
+    main(sav_file=a.upper(), guid=b.upper())
