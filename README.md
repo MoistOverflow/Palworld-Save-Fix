@@ -1,4 +1,7 @@
-# Palworld Host Save Fix No uesave
+# Palworld Save Fix 
+## No UESAVE
+## no melee bug
+
 
 > ### Be careful of data loss and *always* make a backup.
 
@@ -19,7 +22,7 @@ Example:
 Prerequisites:
 - Install the dependencies [above].
 - The dedicated server is installed, running, and you're able to join it.
-- No viewing cage support.
+- No viewing cage support. (not tested)
 
 Steps:
 1. Copy your desired save's folder from `C:\Users\<username>\AppData\Local\Pal\Saved\SaveGames\<random_numbers>` to your dedicated server.
