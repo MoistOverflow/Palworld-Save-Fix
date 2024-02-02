@@ -58,7 +58,7 @@ def edit_level_json(old_id: str, new_id: str):
     with open(filename, "r+") as old_file:
         data = str(json.load(old_file))
     temp_data = re.sub(new_id, filler_id, data, flags=re.I)  # data.replace(new_id, filler_id)
-    temp_data2 = eval(re.sub(old_id, new_id, temp_data, flags=re.I))  # eval(temp_data.replace(old_id, new_id))
+    temp_data2 = re.sub(old_id, new_id, temp_data, flags=re.I)  # eval(temp_data.replace(old_id, new_id))
     new_data = eval(re.sub(filler_id, old_id, temp_data2, flags=re.I))  # eval(temp_data2.replace(filler_id, old_id))
     os.remove(filename)
     with open(filename, 'w') as new_file:
