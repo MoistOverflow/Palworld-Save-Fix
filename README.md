@@ -1,7 +1,7 @@
 # Palworld Save Fix 
 
 > ### No UESAVE
-> ### No melee bug
+> ### No left click bug
 > ### Be careful of data loss and *always* make a backup.
 
 Dependencies:
