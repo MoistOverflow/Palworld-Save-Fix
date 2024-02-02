@@ -16,19 +16,19 @@ def main(sav_file: str, guid: str):
         guid = guid[:-4]
 
     convert_sav_to_json(filename=f"savs/{sav_file}.sav", output_path=f"./savs/{sav_file}.json")
-    # # do work on user.sav
-    # edit_user_json(sav_file, guid)
+    # do work on user.sav
+    edit_user_json(sav_file, guid)
 
-    # convert_json_to_sav(filename=f"savs/{sav_file}.json", output_path=f"./savs/{guid}.sav")
-    # os.remove(f"savs/{sav_file}.json")
+    convert_json_to_sav(filename=f"savs/{sav_file}.json", output_path=f"./savs/{guid}.sav")
+    os.remove(f"savs/{sav_file}.json")
 
-    # convert_sav_to_json(filename="savs/Level.sav", output_path="./savs/Level.json")
-    # os.remove("savs/Level.sav")
-    # # do work on level.sav
-    # edit_level_json(sav_file, guid)
+    convert_sav_to_json(filename="savs/Level.sav", output_path="./savs/Level.json")
+    os.remove("savs/Level.sav")
+    # do work on level.sav
+    edit_level_json(sav_file, guid)
 
-    # convert_json_to_sav(filename="savs/Level.json", output_path="./savs/Level.sav")
-    # os.remove("savs/Level.json")
+    convert_json_to_sav(filename="savs/Level.json", output_path="./savs/Level.sav")
+    os.remove("savs/Level.json")
 
 
 def format_id_string(guid: str):
