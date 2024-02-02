@@ -1,7 +1,7 @@
 # Palworld Save Fix 
 
 > ### No UESAVE
-> ### No melee bug
+> ### No left click bug
 > ### Be careful of data loss and *always* make a backup.
 
 Dependencies:
@@ -33,7 +33,7 @@ Steps:
 7. Shut the server down and then copy `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Level.sav` and `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Players/<co-op_sav_file>` to the `sav/` folder in the tool
 8. **Make a backup of your save!** This is an experimental script and has known bugs so always keep a backup copy of your save.
 9. Run the script using the command in the [Usage section](#usage) with the information you've gathered and using `00000000000000000000000000000001` as the co-op host's old GUID.
-10. Copy the save from the temporary folder back to the dedicated server. Move the save you had in the dedicated server somewhere else or rename it to something different.
+10. Copy the two save files from the savs folder back to the dedicated server. Move the save you had in the dedicated server somewhere else or rename it to something different.
 11. Start the server back up and have the co-op host join the server with their fixed character.
 
 
