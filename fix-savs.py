@@ -16,19 +16,19 @@ def main(sav_file: str, guid: str):
         guid = guid[:-4]
 
     convert_sav_to_json(filename=f"savs/{sav_file}.sav", output_path=f"./savs/{sav_file}.json")
-    # do work on user.sav
-    edit_user_json(sav_file, guid)
+    # # do work on user.sav
+    # edit_user_json(sav_file, guid)
 
-    convert_json_to_sav(filename=f"savs/{sav_file}.json", output_path=f"./savs/{guid}.sav")
-    os.remove(f"savs/{sav_file}.json")
+    # convert_json_to_sav(filename=f"savs/{sav_file}.json", output_path=f"./savs/{guid}.sav")
+    # os.remove(f"savs/{sav_file}.json")
 
-    convert_sav_to_json(filename="savs/Level.sav", output_path="./savs/Level.json")
-    os.remove("savs/Level.sav")
-    # do work on level.sav
-    edit_level_json(sav_file, guid)
+    # convert_sav_to_json(filename="savs/Level.sav", output_path="./savs/Level.json")
+    # os.remove("savs/Level.sav")
+    # # do work on level.sav
+    # edit_level_json(sav_file, guid)
 
-    convert_json_to_sav(filename="savs/Level.json", output_path="./savs/Level.sav")
-    os.remove("savs/Level.json")
+    # convert_json_to_sav(filename="savs/Level.json", output_path="./savs/Level.sav")
+    # os.remove("savs/Level.json")
 
 
 def format_id_string(guid: str):
@@ -51,14 +51,15 @@ def edit_user_json(old_id: str, new_id: str):
 
 def edit_level_json(old_id: str, new_id: str):
     print(f"Editing Level.sav from {old_id} to {new_id}")
-    filler_id = "00000000-0000-0000-0000-000000000006"
+    filler_id = "00000000-0000-0000-0000-000000000000"
     filename = "savs/Level.json"
     old_id = format_id_string(old_id)
     new_id = format_id_string(new_id)
     with open(filename, "r+") as old_file:
         data = str(json.load(old_file))
     temp_data = re.sub(new_id, filler_id, data, flags=re.I)  # data.replace(new_id, filler_id)
-    new_data = eval(re.sub(old_id, new_id, temp_data, flags=re.I))  # eval(temp_data.replace(old_id, new_id))
+    temp_data2 = eval(re.sub(old_id, new_id, temp_data, flags=re.I))  # eval(temp_data.replace(old_id, new_id))
+    new_data = eval(re.sub(filler_id, old_id, temp_data2, flags=re.I))  # eval(temp_data2.replace(filler_id, old_id))
     os.remove(filename)
     with open(filename, 'w') as new_file:
         indent = "\t"
