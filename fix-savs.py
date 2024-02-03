@@ -51,7 +51,7 @@ def edit_user_json(old_id: str, new_id: str):
 
 def edit_level_json(old_id: str, new_id: str):
     print(f"Editing Level.sav from {old_id} to {new_id}")
-    filler_id = "00000000-0000-0000-0000-000000000000"
+    filler_id = "00000000-0000-0000-0000-000000000009"
     filename = "savs/Level.json"
     old_id = format_id_string(old_id)
     new_id = format_id_string(new_id)
