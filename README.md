@@ -30,7 +30,7 @@ Steps:
 4. Confirm you can connect to your save on the dedicated server and that the world is the one in the save. You can check the world with a character that belongs to a regular player from the co-op.
 5. Afterwards, the co-op host must create a new character on the dedicated server. A new `.sav` file should appear in `PalServer\Pal\Saved\SaveGames\0\<your_save_here>\Players`.
 6. The name of that new `.sav` file is the co-op host's new GUID. We will need the co-op host's new GUID for the script to work.
-7. Shut the server down and then copy `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Level.sav` and `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Players/<co-op_sav_file>` to the `sav/` folder in the tool
+7. Shut the server down and then copy `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Level.sav` and `PalServer\Pal\Saved\SaveGames\0\<your_save_here>/Players/<your_save_here>` to the `sav/` folder in the tool
 8. **Make a backup of your save!** This is an experimental script and has known bugs so always keep a backup copy of your save.
 9. Run the script using the command in the [Usage section](#usage) with the information you've gathered and using `00000000000000000000000000000001` as the co-op host's old GUID.
 10. Copy the two save files from the savs folder back to the dedicated server. Move the save you had in the dedicated server somewhere else or rename it to something different.
